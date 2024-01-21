@@ -8,8 +8,10 @@ require('dotenv').config({ path: path.join(__dirname, '.env') });
 const app = express();
 
 var corsOptions = {
-  origin: "http://localhost:8081"
+  origin: "http://localhost:5173"
 };
+
+app.use(cors(corsOptions));
 
 const PORT = process.env.PORT;
 
@@ -19,11 +21,10 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+  res.sendFile(path.join(__dirname, 'public', 'dist', 'index.html'));
 });
 
 require("./routes/users.routes")(app);
-//
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}.`);

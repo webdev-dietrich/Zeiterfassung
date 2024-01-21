@@ -49,7 +49,7 @@ const loginUser = async (req, res) => {
     const user = await Users.findOne({ where: { username } });
 
     if (user && (await bcrypt.compare(password, user.password))) {
-      res.json({ message: 'Login successful' });
+      res.json({ user: user });
     } else {
       res.status(401).send('Invalid credentials');
     }
