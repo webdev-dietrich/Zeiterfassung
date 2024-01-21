@@ -1,0 +1,1 @@
+import{c as s,o as a,a as r}from"./index-IR2a_sRS.js";const _=(e,t)=>{const o=e.__vccOpts||e;for(const[c,n]of t)o[c]=n;return o},i={},l=r("h1",null,"This is an about page",-1),u=[l];function d(e,t){return a(),s("div",null,u)}const p=_(i,[["render",d]]);export{p as default};

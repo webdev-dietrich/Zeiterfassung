@@ -1,5 +1,5 @@
 {
-  "name": "public",
+  "name": "zeiterfassung",
   "version": "0.0.0",
   "private": true,
   "type": "module",
@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "axios": "^1.6.5",
+    "boxicons": "^2.1.4",
     "pinia": "^2.1.7",
     "vue": "^3.3.11",
     "vue-router": "^4.2.5"

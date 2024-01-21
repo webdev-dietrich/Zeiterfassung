@@ -21,7 +21,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'dist', 'index.html'));
+  res.json(path.join(__dirname, 'public', 'index.html'));
 });
 
 require("./routes/users.routes")(app);

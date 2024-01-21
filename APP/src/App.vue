@@ -3,8 +3,10 @@
     <div class="wrapper">
       <nav>
         <div class="nav_main">
-          <RouterLink class='nav_element' to="/">Home</RouterLink>
-          <RouterLink v-if="userStore.userIsLoaded" class='nav_element' to="/about">About</RouterLink>
+          <RouterLink class="nav_element" to="/">Home</RouterLink>
+          <RouterLink v-if="userStore.userIsLoaded" class="nav_element" to="/about"
+            >About</RouterLink
+          >
         </div>
         <div class="nav_right">
           <button v-if="userStore.userIsLoaded" class="nav_element" @click="logout">Logout</button>
@@ -19,17 +21,16 @@
 </template>
 
 <script setup>
-import { RouterLink, RouterView } from 'vue-router';
-import { useUserStore } from './stores/users';
+import { RouterLink, RouterView } from 'vue-router'
+import { useUserStore } from './stores/users'
 
-const userStore = useUserStore();
+const userStore = useUserStore()
 
 const logout = () => {
-  userStore.logoutUser();
-};
+  userStore.logoutUser()
+}
 
 const login = () => {
-  userStore.loginUser();
-};
-
+  userStore.loginUser()
+}
 </script>
